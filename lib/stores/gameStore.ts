@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { GameState } from '@/types';
+import { GameState, Achievement } from '@/types';
 import { persistence } from '../persistence';
 import { analytics } from '../analytics';
 import { Config } from '@/constants/Config';
@@ -13,6 +13,8 @@ interface GameStore extends GameState {
   addCoins: (amount: number) => void;
   updateStreak: () => void;
   incrementLessonsCompleted: () => void;
+  unlockAchievement: (achievementId: string) => void;
+  hasAchievement: (achievementId: string) => boolean;
   reset: () => void;
 }
 
@@ -25,6 +27,7 @@ const initialState: GameState = {
   maxHearts: Config.MAX_HEARTS,
   coins: 0,
   totalLessonsCompleted: 0,
+  achievements: [],
 };
 
 export const useGameStore = create<GameStore>((set, get) => ({
@@ -140,6 +143,49 @@ export const useGameStore = create<GameStore>((set, get) => ({
       persistence.saveGameState(newState);
       return newState;
     });
+  },
+
+  unlockAchievement: (achievementId: string) => {
+    const { achievements } = get();
+
+    // Verificar si ya tiene el achievement
+    if (achievements.find((a) => a.id === achievementId)) {
+      return;
+    }
+
+    // Buscar el achievement en el catálogo
+    const { ACHIEVEMENTS } = require('@/constants/Achievements');
+    const achievement = ACHIEVEMENTS.find((a: Achievement) => a.id === achievementId);
+
+    if (!achievement) {
+      console.warn(`Achievement ${achievementId} not found`);
+      return;
+    }
+
+    set((state) => {
+      const newAchievement: Achievement = {
+        ...achievement,
+        unlockedAt: new Date().toISOString(),
+      };
+
+      const newState = {
+        ...state,
+        achievements: [...state.achievements, newAchievement],
+      };
+
+      analytics.track('achievement_unlocked', {
+        achievementId,
+        title: achievement.title,
+        rarity: achievement.rarity,
+      });
+
+      persistence.saveGameState(newState);
+      return newState;
+    });
+  },
+
+  hasAchievement: (achievementId: string) => {
+    return !!get().achievements.find((a) => a.id === achievementId);
   },
 
   reset: async () => {

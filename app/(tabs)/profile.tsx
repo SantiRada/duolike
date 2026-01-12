@@ -25,7 +25,7 @@ export default function ProfileScreen() {
   const resetProgress = useProgressStore((state) => state.reset);
   const resetGame = useGameStore((state) => state.reset);
 
-  const { xp, level, streak, hearts, maxHearts, coins, totalLessonsCompleted } =
+  const { xp, level, streak, hearts, maxHearts, coins, totalLessonsCompleted, achievements } =
     useGameStore();
 
   const totalExercisesAnswered = Object.keys(exercisesAnswered).length;
@@ -128,6 +128,51 @@ export default function ProfileScreen() {
             </View>
             <Text style={styles.resourceValue}>{xp}</Text>
           </View>
+        </Card>
+
+        {/* Achievements */}
+        <Card style={styles.card}>
+          <Text style={styles.sectionTitle}>Logros</Text>
+
+          {achievements.length === 0 ? (
+            <View style={styles.emptyState}>
+              <MaterialIcons name="emoji-events" size={48} color={Colors.disabled} />
+              <Text style={styles.emptyText}>
+                Completá lecciones de test para desbloquear logros
+              </Text>
+            </View>
+          ) : (
+            <View style={styles.achievementsGrid}>
+              {achievements.map((achievement) => {
+                const rarityColor =
+                  achievement.rarity === 'legendary' ? '#FFD700' :
+                  achievement.rarity === 'epic' ? '#9333EA' :
+                  achievement.rarity === 'rare' ? '#3B82F6' :
+                  '#6B7280';
+
+                return (
+                  <View key={achievement.id} style={styles.achievementBox}>
+                    <View style={[styles.achievementIconContainer, { backgroundColor: rarityColor + '20' }]}>
+                      <MaterialIcons
+                        name={achievement.icon as any}
+                        size={32}
+                        color={rarityColor}
+                      />
+                    </View>
+                    <Text style={styles.achievementTitle}>{achievement.title}</Text>
+                    <Text style={styles.achievementDescription}>
+                      {achievement.description}
+                    </Text>
+                    <View style={[styles.rarityBadge, { backgroundColor: rarityColor }]}>
+                      <Text style={styles.rarityText}>
+                        {achievement.rarity.toUpperCase()}
+                      </Text>
+                    </View>
+                  </View>
+                );
+              })}
+            </View>
+          )}
         </Card>
 
         {/* Actions */}
@@ -248,5 +293,61 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     textAlign: 'center',
     marginTop: 4,
+  },
+  emptyState: {
+    alignItems: 'center',
+    paddingVertical: 32,
+  },
+  emptyText: {
+    fontSize: 14,
+    color: Colors.textSecondary,
+    textAlign: 'center',
+    marginTop: 12,
+  },
+  achievementsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  achievementBox: {
+    flex: 1,
+    minWidth: '100%',
+    backgroundColor: Colors.background,
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  achievementIconContainer: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  achievementTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: Colors.textPrimary,
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  achievementDescription: {
+    fontSize: 14,
+    color: Colors.textSecondary,
+    textAlign: 'center',
+    marginBottom: 12,
+    lineHeight: 20,
+  },
+  rarityBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  rarityText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    letterSpacing: 1,
   },
 });

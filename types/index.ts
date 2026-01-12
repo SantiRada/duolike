@@ -6,7 +6,8 @@ export type ExerciseType =
   | 'reorder'
   | 'match_pairs'
   | 'choose_design'
-  | 'highlight';
+  | 'highlight'
+  | 'theory';
 
 export type ConceptTag =
   | 'legibilidad'
@@ -89,13 +90,25 @@ export interface HighlightExercise extends BaseExercise {
   correctHighlight: string; // substring exacta a seleccionar
 }
 
+// Theory Screen (no es un ejercicio, es contenido educativo)
+export interface TheoryScreen {
+  id: string;
+  type: 'theory';
+  title: string;
+  content: string[]; // array de párrafos
+  conceptTag: ConceptTag;
+  examples?: string[]; // ejemplos opcionales
+  keyTakeaways?: string[]; // puntos clave
+}
+
 export type Exercise =
   | MultipleChoiceExercise
   | FillBlankExercise
   | ReorderExercise
   | MatchPairsExercise
   | ChooseDesignExercise
-  | HighlightExercise;
+  | HighlightExercise
+  | TheoryScreen;
 
 // ===== LESSON & WORLD =====
 
@@ -109,6 +122,8 @@ export interface Lesson {
   exercises: Exercise[];
   xpReward: number; // bonus al completar
   unlockRequirement?: string; // lessonId previo requerido
+  isChapterTest?: boolean; // si es un test de capítulo
+  achievementReward?: string; // ID del achievement que otorga
 }
 
 export interface World {
@@ -117,6 +132,17 @@ export interface World {
   description: string;
   theme: string; // "medieval", "cyberpunk", etc.
   lessons: Lesson[];
+}
+
+// ===== ACHIEVEMENTS =====
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon: string; // Material Icons name
+  rarity: 'common' | 'rare' | 'epic' | 'legendary';
+  unlockedAt?: string; // ISO date
 }
 
 // ===== USER PROGRESS =====
@@ -151,6 +177,7 @@ export interface GameState {
   maxHearts: number;
   coins: number;
   totalLessonsCompleted: number;
+  achievements: Achievement[]; // premios ganados
 }
 
 // ===== ANALYTICS =====

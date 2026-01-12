@@ -6,6 +6,7 @@ import { Reorder } from './Reorder';
 import { MatchPairs } from './MatchPairs';
 import { ChooseDesign } from './ChooseDesign';
 import { Highlight } from './Highlight';
+import { TheoryScreen } from './TheoryScreen';
 
 interface ExerciseRendererProps {
   exercise: Exercise;
@@ -66,6 +67,14 @@ export function ExerciseRenderer({
           exercise={exercise}
           onAnswer={onAnswer}
           disabled={disabled}
+        />
+      );
+
+    case 'theory':
+      return (
+        <TheoryScreen
+          theory={exercise}
+          onContinue={() => onAnswer(true)}
         />
       );
 
