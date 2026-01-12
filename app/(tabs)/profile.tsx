@@ -7,6 +7,7 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useProgressStore } from '@/lib/stores/progressStore';
 import { useGameStore } from '@/lib/stores/gameStore';
 import { Colors } from '@/constants/Colors';
@@ -61,7 +62,10 @@ export default function ProfileScreen() {
         {/* XP & Level */}
         <Card style={styles.card}>
           <View style={styles.header}>
-            <Text style={styles.greeting}>👋 Hola, Diseñador</Text>
+            <View style={styles.greetingContainer}>
+              <MaterialIcons name="waving-hand" size={28} color={Colors.xpBar} />
+              <Text style={styles.greeting}>Hola, Diseñador</Text>
+            </View>
             <StreakIndicator streak={streak} />
           </View>
           <XPBar xp={xp} level={level} />
@@ -88,8 +92,9 @@ export default function ProfileScreen() {
             </View>
 
             <View style={styles.statBox}>
+              <MaterialIcons name="monetization-on" size={32} color={Colors.coinGold} style={styles.statIcon} />
               <Text style={styles.statValue}>{coins}</Text>
-              <Text style={styles.statLabel}>💰 Monedas</Text>
+              <Text style={styles.statLabel}>Monedas</Text>
             </View>
           </View>
         </Card>
@@ -99,19 +104,28 @@ export default function ProfileScreen() {
           <Text style={styles.sectionTitle}>Recursos</Text>
 
           <View style={styles.resourceRow}>
-            <Text style={styles.resourceLabel}>❤️ Corazones</Text>
+            <View style={styles.resourceLabelContainer}>
+              <MaterialIcons name="favorite" size={20} color={Colors.heartRed} />
+              <Text style={styles.resourceLabel}>Corazones</Text>
+            </View>
             <Text style={styles.resourceValue}>
               {hearts} / {maxHearts}
             </Text>
           </View>
 
           <View style={styles.resourceRow}>
-            <Text style={styles.resourceLabel}>🔥 Racha actual</Text>
+            <View style={styles.resourceLabelContainer}>
+              <MaterialIcons name="local-fire-department" size={20} color={Colors.streakFire} />
+              <Text style={styles.resourceLabel}>Racha actual</Text>
+            </View>
             <Text style={styles.resourceValue}>{streak} días</Text>
           </View>
 
           <View style={styles.resourceRow}>
-            <Text style={styles.resourceLabel}>⭐ XP Total</Text>
+            <View style={styles.resourceLabelContainer}>
+              <MaterialIcons name="stars" size={20} color={Colors.xpBar} />
+              <Text style={styles.resourceLabel}>XP Total</Text>
+            </View>
             <Text style={styles.resourceValue}>{xp}</Text>
           </View>
         </Card>
@@ -155,6 +169,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 16,
   },
+  greetingContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
   greeting: {
     fontSize: 24,
     fontWeight: '700',
@@ -179,6 +198,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
   },
+  statIcon: {
+    marginBottom: 8,
+  },
   statValue: {
     fontSize: 32,
     fontWeight: '800',
@@ -197,6 +219,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
+  },
+  resourceLabelContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
   },
   resourceLabel: {
     fontSize: 16,

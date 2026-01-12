@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 
 interface HeartCounterProps {
@@ -11,9 +12,13 @@ export function HeartCounter({ hearts, maxHearts }: HeartCounterProps) {
   const heartIcons = Array.from({ length: maxHearts }, (_, i) => {
     const filled = i < hearts;
     return (
-      <Text key={i} style={styles.heart}>
-        {filled ? '❤️' : '🤍'}
-      </Text>
+      <MaterialIcons
+        key={i}
+        name={filled ? 'favorite' : 'favorite-border'}
+        size={22}
+        color={filled ? Colors.heartRed : Colors.disabled}
+        style={styles.heart}
+      />
     );
   });
 
@@ -24,9 +29,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 4,
   },
   heart: {
-    fontSize: 20,
-    marginHorizontal: 2,
+    marginHorizontal: 1,
   },
 });

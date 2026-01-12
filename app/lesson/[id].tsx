@@ -8,6 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useProgressStore } from '@/lib/stores/progressStore';
 import { useGameStore } from '@/lib/stores/gameStore';
 import { Colors } from '@/constants/Colors';
@@ -101,6 +102,21 @@ export default function LessonScreen() {
     } else {
       if (hearts > 0) {
         loseHeart();
+        // Verificar si se acabaron los corazones
+        if (hearts - 1 === 0) {
+          setTimeout(() => {
+            Alert.alert(
+              'Sin corazones',
+              'Te quedaste sin vidas. Volvé al menú y recuperá corazones.',
+              [
+                {
+                  text: 'Volver al menú',
+                  onPress: () => router.back(),
+                },
+              ]
+            );
+          }, 1500);
+        }
       }
     }
   };
@@ -130,16 +146,8 @@ export default function LessonScreen() {
       heartsRemaining: hearts,
     });
 
-    Alert.alert(
-      '¡Lección completada! 🎉',
-      `Ganaste ${lesson.xpReward} XP y ${Config.COINS_PER_LESSON} monedas`,
-      [
-        {
-          text: 'Continuar',
-          onPress: () => router.back(),
-        },
-      ]
-    );
+    // Volver al menú automáticamente al completar la lección
+    router.back();
   };
 
   if (showIntro) {
@@ -155,12 +163,18 @@ export default function LessonScreen() {
               </Text>
             </View>
             <View style={styles.introStats}>
-              <Text style={styles.introStat}>
-                📚 {lesson.exercises.length} ejercicios
-              </Text>
-              <Text style={styles.introStat}>
-                ⭐ +{lesson.xpReward} XP al completar
-              </Text>
+              <View style={styles.introStatItem}>
+                <MaterialIcons name="school" size={20} color={Colors.primary} />
+                <Text style={styles.introStat}>
+                  {lesson.exercises.length} ejercicios
+                </Text>
+              </View>
+              <View style={styles.introStatItem}>
+                <MaterialIcons name="stars" size={20} color={Colors.xpBar} />
+                <Text style={styles.introStat}>
+                  +{lesson.xpReward} XP
+                </Text>
+              </View>
             </View>
             <Button
               title="Empezar"
@@ -253,6 +267,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 24,
+  },
+  introStatItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
   },
   introStat: {
     fontSize: 16,
