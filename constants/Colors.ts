@@ -1,26 +1,44 @@
 export const Colors = {
-  primary: '#4A148C', // púrpura oscuro
-  primaryLight: '#7B1FA2',
-  secondary: '#FF6F00', // naranja
-  secondaryLight: '#FFA726',
+  // Modo oscuro - estilo Duolingo
+  primary: '#58CC02', // verde Duolingo
+  primaryLight: '#6DD400',
+  primaryDark: '#4CAF50',
+  secondary: '#FF9600', // naranja
+  secondaryLight: '#FFB84D',
 
-  success: '#4CAF50',
-  error: '#F44336',
-  warning: '#FFC107',
+  success: '#58CC02',
+  error: '#FF4B4B',
+  warning: '#FFC800',
 
-  background: '#F5F5F5',
-  surface: '#FFFFFF',
+  // Backgrounds modo oscuro
+  background: '#0F0F0F', // casi negro
+  backgroundElevated: '#1C1C1E', // cards elevadas
+  surface: '#2C2C2E', // surface más clara
+  surfaceVariant: '#3A3A3C',
 
-  textPrimary: '#212121',
-  textSecondary: '#757575',
+  // Textos
+  textPrimary: '#FFFFFF',
+  textSecondary: '#AFAFAF',
+  textTertiary: '#6E6E73',
   textLight: '#FFFFFF',
 
-  border: '#E0E0E0',
-  disabled: '#BDBDBD',
+  border: '#3A3A3C',
+  borderLight: '#48484A',
+  disabled: '#6E6E73',
 
   // Gamificación
-  xpBar: '#FFD700', // dorado
-  heartRed: '#E53935',
-  streakFire: '#FF5722',
-  coinGold: '#FFC107',
+  xpBar: '#FFC800', // amarillo/dorado
+  heartRed: '#FF4B4B',
+  streakFire: '#FF9500',
+  coinGold: '#FFC800',
+
+  // Nav colors
+  navInactive: '#454545',
+  navActive: '#111111',
+  navBackground: '#000000',
+
+  // Node colors (lesson path)
+  nodeLocked: '#3A3A3C',
+  nodeAvailable: '#58CC02',
+  nodeCompleted: '#1CB0F6', // azul
 };

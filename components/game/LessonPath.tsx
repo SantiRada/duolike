@@ -5,10 +5,14 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Dimensions,
 } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import { Lesson } from '@/types';
 import { useRouter } from 'expo-router';
+
+const { width } = Dimensions.get('window');
 
 interface LessonPathProps {
   lessons: Lesson[];
@@ -44,25 +48,56 @@ export function LessonPath({ lessons, completedLessons }: LessonPathProps) {
     router.push(`/lesson/${lesson.id}`);
   };
 
+  // Layout zigzag tipo Duolingo: left, center, right, center...
+  const getNodePosition = (index: number) => {
+    const pattern = index % 4;
+    if (pattern === 0) return 'left';
+    if (pattern === 1) return 'center';
+    if (pattern === 2) return 'right';
+    return 'center';
+  };
+
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {lessons.map((lesson, index) => {
         const status = getNodeStatus(lesson, index);
         const isLast = index === lessons.length - 1;
+        const position = getNodePosition(index);
 
         return (
-          <View key={lesson.id} style={styles.nodeContainer}>
-            <TouchableOpacity
-              style={[
-                styles.node,
-                status === 'completed' && styles.nodeCompleted,
-                status === 'available' && styles.nodeAvailable,
-                status === 'locked' && styles.nodeLocked,
-              ]}
-              onPress={() => handleNodePress(lesson, status)}
-              disabled={status === 'locked'}
-            >
-              <Text style={styles.nodeNumber}>{index + 1}</Text>
+          <View key={lesson.id} style={styles.nodeWrapper}>
+            <View style={[styles.nodeContainer, styles[`position_${position}`]]}>
+              <TouchableOpacity
+                style={[
+                  styles.node,
+                  status === 'completed' && styles.nodeCompleted,
+                  status === 'available' && styles.nodeAvailable,
+                  status === 'locked' && styles.nodeLocked,
+                ]}
+                onPress={() => handleNodePress(lesson, status)}
+                disabled={status === 'locked'}
+                activeOpacity={0.7}
+              >
+                <View style={styles.nodeContent}>
+                  <Text style={styles.nodeNumber}>{index + 1}</Text>
+                  {status === 'completed' && (
+                    <MaterialIcons
+                      name="check-circle"
+                      size={28}
+                      color="#FFFFFF"
+                      style={styles.icon}
+                    />
+                  )}
+                  {status === 'locked' && (
+                    <MaterialIcons
+                      name="lock"
+                      size={24}
+                      color={Colors.disabled}
+                      style={styles.icon}
+                    />
+                  )}
+                </View>
+              </TouchableOpacity>
               <Text
                 style={[
                   styles.nodeTitle,
@@ -72,11 +107,7 @@ export function LessonPath({ lessons, completedLessons }: LessonPathProps) {
               >
                 {lesson.title}
               </Text>
-              {status === 'completed' && (
-                <Text style={styles.checkmark}>✓</Text>
-              )}
-              {status === 'locked' && <Text style={styles.lock}>🔒</Text>}
-            </TouchableOpacity>
+            </View>
 
             {!isLast && <View style={styles.connector} />}
           </View>
@@ -89,64 +120,83 @@ export function LessonPath({ lessons, completedLessons }: LessonPathProps) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 16,
+  },
+  nodeWrapper: {
+    width: '100%',
+    alignItems: 'center',
   },
   nodeContainer: {
     alignItems: 'center',
-    marginVertical: 8,
+    marginVertical: 12,
+  },
+  position_left: {
+    alignSelf: 'flex-start',
+    marginLeft: width * 0.15,
+  },
+  position_center: {
+    alignSelf: 'center',
+  },
+  position_right: {
+    alignSelf: 'flex-end',
+    marginRight: width * 0.15,
   },
   node: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+    width: 90,
+    height: 90,
+    borderRadius: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 4,
+    borderWidth: 6,
     position: 'relative',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
   },
   nodeCompleted: {
-    backgroundColor: Colors.success,
-    borderColor: Colors.success,
+    backgroundColor: Colors.nodeCompleted,
+    borderColor: Colors.nodeCompleted,
   },
   nodeAvailable: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.nodeAvailable,
     borderColor: Colors.primaryLight,
   },
   nodeLocked: {
-    backgroundColor: Colors.disabled,
-    borderColor: Colors.border,
+    backgroundColor: Colors.nodeLocked,
+    borderColor: Colors.nodeLocked,
+  },
+  nodeContent: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   nodeNumber: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '800',
-    color: Colors.textLight,
-    position: 'absolute',
-    top: 10,
+    color: '#FFFFFF',
+    marginBottom: 4,
+  },
+  icon: {
+    marginTop: 4,
   },
   nodeTitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
-    color: Colors.textLight,
+    color: Colors.textPrimary,
     textAlign: 'center',
     paddingHorizontal: 8,
-    marginTop: 12,
+    marginTop: 8,
+    maxWidth: 120,
   },
   nodeTitleLocked: {
-    color: Colors.textSecondary,
-  },
-  checkmark: {
-    fontSize: 32,
-    position: 'absolute',
-    bottom: 8,
-  },
-  lock: {
-    fontSize: 24,
-    position: 'absolute',
-    bottom: 8,
+    color: Colors.textTertiary,
   },
   connector: {
-    width: 4,
-    height: 40,
+    width: 6,
+    height: 35,
     backgroundColor: Colors.border,
-    marginVertical: 4,
+    marginVertical: 2,
+    borderRadius: 3,
   },
 });

@@ -4,9 +4,9 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import { Button } from './Button';
 
@@ -37,9 +37,16 @@ export function FeedbackModal({
             isCorrect ? styles.containerCorrect : styles.containerWrong,
           ]}
         >
-          <Text style={styles.title}>
-            {isCorrect ? '¡Correcto! 🎉' : 'Incorrecto'}
-          </Text>
+          <View style={styles.titleContainer}>
+            {isCorrect ? (
+              <MaterialIcons name="check-circle" size={40} color={Colors.success} />
+            ) : (
+              <MaterialIcons name="cancel" size={40} color={Colors.error} />
+            )}
+            <Text style={styles.title}>
+              {isCorrect ? '¡Correcto!' : 'Incorrecto'}
+            </Text>
+          </View>
           <Text style={styles.feedback}>{feedback}</Text>
           <Button
             title="Continuar"
@@ -58,29 +65,33 @@ const styles = StyleSheet.create({
   overlay: {
     flex: 1,
     justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.8)',
   },
   container: {
-    backgroundColor: Colors.surface,
+    backgroundColor: Colors.backgroundElevated,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
-    padding: 24,
+    padding: 32,
     minHeight: height * 0.3,
     maxHeight: height * 0.5,
+    borderTopWidth: 6,
   },
   containerCorrect: {
-    borderTopWidth: 4,
     borderTopColor: Colors.success,
   },
   containerWrong: {
-    borderTopWidth: 4,
     borderTopColor: Colors.error,
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 20,
   },
   title: {
     fontSize: 28,
     fontWeight: '800',
     color: Colors.textPrimary,
-    marginBottom: 16,
   },
   feedback: {
     fontSize: 18,

@@ -7,6 +7,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useProgressStore } from '@/lib/stores/progressStore';
 import { useGameStore } from '@/lib/stores/gameStore';
 import { Colors } from '@/constants/Colors';
@@ -95,8 +96,9 @@ export default function HomeScreen() {
 
         {nextLesson === undefined && (
           <View style={styles.completedContainer}>
+            <MaterialIcons name="celebration" size={48} color={Colors.success} />
             <Text style={styles.completedText}>
-              🎉 ¡Completaste todas las lecciones!
+              ¡Completaste todas las lecciones!
             </Text>
             <Text style={styles.completedSubtext}>
               Seguí practicando en la pestaña "Practicar"
