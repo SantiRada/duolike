@@ -1,0 +1,1165 @@
+{
+  "id": "world-1",
+  "name": "La Taberna del Último Pixel",
+  "description": "Ayudá al tabernero a diseñar el cartel perfecto para atraer clientes",
+  "theme": "medieval",
+  "lessons": [
+    {
+      "id": "lesson-1-1",
+      "worldId": "world-1",
+      "order": 1,
+      "title": "Bienvenida a la Taberna",
+      "description": "Conocé el desafío y los objetivos del proyecto",
+      "narrativeIntro": "La Taberna del Último Pixel está en crisis. El viejo cartel es ilegible y nadie entra. El tabernero te contrató para diseñar uno nuevo. ¡Empecemos!",
+      "xpReward": 50,
+      "exercises": [
+        {
+          "id": "ex-1-1-1",
+          "type": "multiple_choice",
+          "prompt": "¿Cuál es el objetivo principal de un cartel para un negocio?",
+          "conceptTag": "evaluacion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Verse bonito",
+            "Comunicar claramente qué ofrece el lugar",
+            "Usar muchos colores",
+            "Tener el logo más grande"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! Un cartel debe comunicar, no solo decorar.",
+          "feedbackWrong": "Un cartel efectivo comunica qué ofrece el lugar de forma clara. Lo estético es secundario."
+        },
+        {
+          "id": "ex-1-1-2",
+          "type": "fill_blank",
+          "prompt": "Completá: En diseño, el ___ debe ser claro y directo para que el usuario no se confunda.",
+          "sentence": "En diseño, el ___ debe ser claro y directo para que el usuario no se confunda.",
+          "conceptTag": "copy",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "mensaje",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Bien! El mensaje claro es clave.",
+          "feedbackWrong": "La palabra correcta es 'mensaje'. Un mensaje claro evita confusión."
+        },
+        {
+          "id": "ex-1-1-3",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel comunica mejor que es una taberna?",
+          "conceptTag": "copy",
+          "difficulty": 1,
+          "xpReward": 10,
+          "designs": [
+            {
+              "id": "design-a",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "subtitle": "",
+                "bodyText": "",
+                "cta": "",
+                "backgroundColor": "#8B4513",
+                "textColor": "#FFD700",
+                "fontSize": { "title": 48 }
+              }
+            },
+            {
+              "id": "design-b",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "La Taberna del Último Pixel",
+                "subtitle": "Cerveza artesanal y comida caliente",
+                "bodyText": "",
+                "cta": "¡Entrá!",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 28, "subtitle": 16 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Perfecto! La opción B da contexto: qué es y qué ofrece.",
+          "feedbackWrong": "La opción A solo dice 'Taberna', pero no da información. La B es más clara."
+        },
+        {
+          "id": "ex-1-1-4",
+          "type": "multiple_choice",
+          "prompt": "¿Por qué es importante que un cartel sea legible desde lejos?",
+          "conceptTag": "legibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Para parecer profesional",
+            "Porque la gente decide si entrar antes de acercarse",
+            "Para usar tipografías grandes",
+            "No es importante"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! La gente toma decisiones rápidas a distancia.",
+          "feedbackWrong": "La legibilidad a distancia permite captar atención antes de que pasen de largo."
+        },
+        {
+          "id": "ex-1-1-5",
+          "type": "reorder",
+          "prompt": "Ordená estos pasos del proceso de diseño de un cartel (del primero al último):",
+          "conceptTag": "evaluacion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "items": [
+            "Definir el mensaje clave",
+            "Elegir tipografía y colores",
+            "Testear legibilidad a distancia",
+            "Diseñar el layout"
+          ],
+          "correctOrder": [0, 3, 1, 2],
+          "feedbackCorrect": "¡Excelente! Primero el mensaje, luego diseño, después detalles, y al final testear.",
+          "feedbackWrong": "El orden correcto: mensaje → layout → tipografía/colores → testear."
+        },
+        {
+          "id": "ex-1-1-6",
+          "type": "match_pairs",
+          "prompt": "Uní cada elemento de diseño con su propósito:",
+          "conceptTag": "evaluacion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "leftColumn": [
+            "Título",
+            "Subtítulo",
+            "CTA (Call to Action)",
+            "Color de fondo"
+          ],
+          "rightColumn": [
+            "Dar contexto adicional",
+            "Captar la atención",
+            "Indicar qué hacer",
+            "Crear contraste"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 0,
+            "2": 2,
+            "3": 3
+          },
+          "feedbackCorrect": "¡Perfecto! Cada elemento tiene un rol específico.",
+          "feedbackWrong": "Título = captar atención; Subtítulo = contexto; CTA = acción; Fondo = contraste."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-2",
+      "worldId": "world-1",
+      "order": 2,
+      "title": "Legibilidad",
+      "description": "Aprendé a hacer texto legible desde lejos",
+      "narrativeIntro": "El tabernero te muestra el cartel viejo: 'No se lee nada desde la calle'. Vas a aprender cómo hacer texto que se lea bien.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-1",
+      "exercises": [
+        {
+          "id": "ex-1-2-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué hace que un texto sea más legible?",
+          "conceptTag": "legibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Usar fuentes decorativas",
+            "Alto contraste entre texto y fondo",
+            "Textos largos y detallados",
+            "Muchos colores diferentes"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Sí! El contraste es clave para la legibilidad.",
+          "feedbackWrong": "El contraste entre texto y fondo es fundamental. Fuentes decorativas suelen dificultar la lectura."
+        },
+        {
+          "id": "ex-1-2-2",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel tiene mejor contraste y legibilidad?",
+          "conceptTag": "legibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "designs": [
+            {
+              "id": "design-low-contrast",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna Abierta",
+                "backgroundColor": "#555555",
+                "textColor": "#777777",
+                "fontSize": { "title": 36 }
+              }
+            },
+            {
+              "id": "design-high-contrast",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna Abierta",
+                "backgroundColor": "#000000",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 36 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! Blanco sobre negro tiene máximo contraste.",
+          "feedbackWrong": "La opción A tiene bajo contraste (gris sobre gris). La B es mucho más legible."
+        },
+        {
+          "id": "ex-1-2-3",
+          "type": "fill_blank",
+          "prompt": "Completá: Para que un texto sea legible desde lejos, necesitás un tamaño de fuente ___ y buen contraste.",
+          "sentence": "Para que un texto sea legible desde lejos, necesitás un tamaño de fuente ___ y buen contraste.",
+          "conceptTag": "legibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "grande",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Grande + contraste = legibilidad.",
+          "feedbackWrong": "Necesitás un tamaño 'grande' para legibilidad a distancia."
+        },
+        {
+          "id": "ex-1-2-4",
+          "type": "highlight",
+          "prompt": "Seleccioná la parte del siguiente cartel que tiene PEOR legibilidad:",
+          "content": "TABERNA ABIERTA | Cervezas importadas, vinos selectos, comidas caseras, música en vivo todos los sábados y domingos",
+          "conceptTag": "legibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctHighlight": "Cervezas importadas, vinos selectos, comidas caseras, música en vivo todos los sábados y domingos",
+          "feedbackCorrect": "¡Bien! El texto largo y sin jerarquía es difícil de escanear.",
+          "feedbackWrong": "El bloque largo sin separación es lo menos legible. Mucho texto junto cansa la vista."
+        },
+        {
+          "id": "ex-1-2-5",
+          "type": "match_pairs",
+          "prompt": "Uní cada problema de legibilidad con su solución:",
+          "conceptTag": "legibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Texto muy pequeño",
+            "Bajo contraste",
+            "Fuente decorativa ilegible",
+            "Texto muy largo"
+          ],
+          "rightColumn": [
+            "Dividir en chunks",
+            "Usar fuente simple (sans-serif)",
+            "Aumentar tamaño de fuente",
+            "Aumentar contraste color"
+          ],
+          "correctPairs": {
+            "0": 2,
+            "1": 3,
+            "2": 1,
+            "3": 0
+          },
+          "feedbackCorrect": "¡Perfecto! Cada problema tiene una solución concreta.",
+          "feedbackWrong": "Repasá: texto pequeño → agrandar; bajo contraste → más contraste; fuente compleja → simplificar; texto largo → dividir."
+        },
+        {
+          "id": "ex-1-2-6",
+          "type": "multiple_choice",
+          "prompt": "¿Cuál es el tamaño mínimo recomendado para un título de cartel visible a 3 metros?",
+          "conceptTag": "legibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "12px",
+            "24px",
+            "48px o más",
+            "No importa el tamaño"
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Correcto! Para carteles, 48px+ es ideal para distancia.",
+          "feedbackWrong": "Tamaños pequeños (12-24px) funcionan en pantallas, pero en carteles necesitás 48px o más."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-3",
+      "worldId": "world-1",
+      "order": 3,
+      "title": "Jerarquía Visual",
+      "description": "Guiá la mirada del usuario",
+      "narrativeIntro": "El tabernero pregunta: '¿Cómo hago para que lean primero lo importante?' Es hora de aprender jerarquía visual.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-2",
+      "exercises": [
+        {
+          "id": "ex-1-3-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es la jerarquía visual?",
+          "conceptTag": "jerarquia",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Usar muchas tipografías diferentes",
+            "Organizar elementos para guiar la atención del usuario",
+            "Poner todo en mayúsculas",
+            "Usar solo un color"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Perfecto! Jerarquía = guiar la atención hacia lo más importante.",
+          "feedbackWrong": "La jerarquía organiza elementos por importancia para guiar la mirada."
+        },
+        {
+          "id": "ex-1-3-2",
+          "type": "reorder",
+          "prompt": "Ordená estos elementos de un cartel según su importancia (de mayor a menor):",
+          "conceptTag": "jerarquia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "items": [
+            "Nombre del lugar (título)",
+            "Horario de apertura (dato menor)",
+            "Qué ofrece (subtítulo)",
+            "Call-to-action ('Entrá ahora')"
+          ],
+          "correctOrder": [0, 2, 3, 1],
+          "feedbackCorrect": "¡Excelente! Primero el nombre, luego qué ofrece, después la acción, y al final los detalles.",
+          "feedbackWrong": "Lo más importante: nombre → qué ofrece → acción → detalles secundarios."
+        },
+        {
+          "id": "ex-1-3-3",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel tiene mejor jerarquía visual?",
+          "conceptTag": "jerarquia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-no-hierarchy",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "Cerveza artesanal",
+                "bodyText": "Horario: 18-02hs",
+                "backgroundColor": "#1A1A1A",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 24, "subtitle": 24, "body": 24 }
+              }
+            },
+            {
+              "id": "design-with-hierarchy",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "Cerveza artesanal",
+                "bodyText": "Horario: 18-02hs",
+                "backgroundColor": "#1A1A1A",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 36, "subtitle": 20, "body": 14 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Bien! La opción B usa tamaños diferentes para crear jerarquía.",
+          "feedbackWrong": "La opción A tiene todo del mismo tamaño. La B diferencia claramente qué es más importante."
+        },
+        {
+          "id": "ex-1-3-4",
+          "type": "fill_blank",
+          "prompt": "Completá: La jerarquía visual se logra principalmente con diferencias de ___, color y posición.",
+          "sentence": "La jerarquía visual se logra principalmente con diferencias de ___, color y posición.",
+          "conceptTag": "jerarquia",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "tamaño",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Tamaño es la herramienta más efectiva para jerarquía.",
+          "feedbackWrong": "La palabra es 'tamaño'. Tamaño + color + posición = jerarquía."
+        },
+        {
+          "id": "ex-1-3-5",
+          "type": "multiple_choice",
+          "prompt": "En un cartel, ¿qué debe ser lo más grande y visible?",
+          "conceptTag": "jerarquia",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "El horario de atención",
+            "La dirección completa",
+            "El nombre del lugar o mensaje principal",
+            "El logo institucional"
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Exacto! El nombre o mensaje principal debe captar la atención primero.",
+          "feedbackWrong": "Lo más importante (nombre o mensaje) debe ser lo más visible. Los detalles van después."
+        },
+        {
+          "id": "ex-1-3-6",
+          "type": "match_pairs",
+          "prompt": "Uní cada nivel de jerarquía con su uso típico:",
+          "conceptTag": "jerarquia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Nivel 1 (más grande)",
+            "Nivel 2 (mediano)",
+            "Nivel 3 (pequeño)",
+            "CTA (destacado)"
+          ],
+          "rightColumn": [
+            "Detalles secundarios",
+            "Título principal",
+            "Acción deseada",
+            "Descripción o subtítulo"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 3,
+            "2": 0,
+            "3": 2
+          },
+          "feedbackCorrect": "¡Perfecto! Cada nivel tiene su propósito en la jerarquía.",
+          "feedbackWrong": "Nivel 1 = título; Nivel 2 = descripción; Nivel 3 = detalles; CTA = acción."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-4",
+      "worldId": "world-1",
+      "order": 4,
+      "title": "Escaneabilidad",
+      "description": "Hacé que el contenido sea fácil de escanear",
+      "narrativeIntro": "Un cliente le dijo al tabernero: 'Tu cartel tiene mucho texto, me cansé de leer'. Aprendamos a hacer contenido escaneable.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-3",
+      "exercises": [
+        {
+          "id": "ex-1-4-1",
+          "type": "multiple_choice",
+          "prompt": "¿Por qué es importante que un cartel sea escaneable?",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Porque la gente solo mira por 3-5 segundos",
+            "Para usar menos palabras",
+            "Porque se ve más profesional",
+            "No es importante"
+          ],
+          "correctAnswer": 0,
+          "feedbackCorrect": "¡Correcto! La gente toma decisiones rápidas y no lee todo.",
+          "feedbackWrong": "Las personas escanean en segundos. Si no es fácil de leer, lo ignoran."
+        },
+        {
+          "id": "ex-1-4-2",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel es más escaneable?",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-wall-text",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "bodyText": "Ofrecemos cervezas artesanales importadas de Europa, vinos selectos de diferentes regiones, comidas caseras hechas con ingredientes frescos todos los días, música en vivo los fines de semana.",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 28, "body": 14 }
+              }
+            },
+            {
+              "id": "design-scannable",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "• Cerveza artesanal\n• Comida casera\n• Música en vivo",
+                "cta": "¡Entrá!",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 28, "subtitle": 16 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Perfecto! La opción B usa bullets y texto corto, mucho más fácil de escanear.",
+          "feedbackWrong": "La opción A es un bloque de texto pesado. La B divide la info en puntos claros."
+        },
+        {
+          "id": "ex-1-4-3",
+          "type": "highlight",
+          "prompt": "Seleccioná la versión más escaneable:",
+          "content": "Nuestra taberna ofrece una variedad de bebidas y comidas todos los días. | • Cerveza\n• Vino\n• Comida",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctHighlight": "• Cerveza\n• Vino\n• Comida",
+          "feedbackCorrect": "¡Bien! Los bullets y el texto corto son más escaneables.",
+          "feedbackWrong": "La lista con bullets es más fácil de escanear que el párrafo."
+        },
+        {
+          "id": "ex-1-4-4",
+          "type": "match_pairs",
+          "prompt": "Uní cada técnica con cómo mejora la escaneabilidad:",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Usar bullets (•)",
+            "Texto corto",
+            "Espaciado entre bloques",
+            "Negritas en palabras clave"
+          ],
+          "rightColumn": [
+            "Reduce fatiga visual",
+            "Divide información en chunks",
+            "Rápido de leer",
+            "Resalta lo importante"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 2,
+            "2": 0,
+            "3": 3
+          },
+          "feedbackCorrect": "¡Excelente! Todas estas técnicas mejoran la escaneabilidad.",
+          "feedbackWrong": "Bullets = chunks; Texto corto = rápido; Espaciado = reduce fatiga; Negritas = resalta."
+        },
+        {
+          "id": "ex-1-4-5",
+          "type": "fill_blank",
+          "prompt": "Completá: Para hacer un texto escaneable, dividilo en ___ pequeños y usá bullets.",
+          "sentence": "Para hacer un texto escaneable, dividilo en ___ pequeños y usá bullets.",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "chunks",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Chunks (bloques pequeños de información).",
+          "feedbackWrong": "La palabra es 'chunks'. Dividir en chunks hace el texto más digerible."
+        },
+        {
+          "id": "ex-1-4-6",
+          "type": "multiple_choice",
+          "prompt": "¿Cuál NO es una buena práctica para escaneabilidad?",
+          "conceptTag": "escaneabilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "Usar listas con viñetas",
+            "Escribir párrafos largos sin separación",
+            "Destacar palabras clave",
+            "Dejar espacio en blanco entre secciones"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! Los párrafos largos son difíciles de escanear.",
+          "feedbackWrong": "Párrafos largos sin separación cansan la vista. Las otras opciones SÍ mejoran la escaneabilidad."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-5",
+      "worldId": "world-1",
+      "order": 5,
+      "title": "Consistencia",
+      "description": "Mantené patrones repetibles",
+      "narrativeIntro": "El tabernero diseñó 3 carteles distintos y ahora nadie sabe si son del mismo lugar. Aprendé por qué la consistencia importa.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-4",
+      "exercises": [
+        {
+          "id": "ex-1-5-1",
+          "type": "multiple_choice",
+          "prompt": "¿Por qué la consistencia es importante en diseño?",
+          "conceptTag": "consistencia",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Para ahorrar tiempo",
+            "Genera confianza y reconocimiento de marca",
+            "Porque se ve más bonito",
+            "No es importante"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! La consistencia genera confianza y hace tu marca reconocible.",
+          "feedbackWrong": "La consistencia ayuda a que la gente reconozca y confíe en tu marca."
+        },
+        {
+          "id": "ex-1-5-2",
+          "type": "highlight",
+          "prompt": "Seleccioná qué elemento NO debería cambiar entre diferentes carteles de la misma taberna:",
+          "content": "Colores de la marca | Tipografía principal | Promoción del día | Tono de voz",
+          "conceptTag": "consistencia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctHighlight": "Promoción del día",
+          "feedbackCorrect": "¡Bien! La promoción del día SÍ puede cambiar. Colores, tipografía y tono deben mantenerse.",
+          "feedbackWrong": "Lo que debe ser consistente: colores, tipografía, tono. Las promociones pueden cambiar."
+        },
+        {
+          "id": "ex-1-5-3",
+          "type": "match_pairs",
+          "prompt": "Uní cada elemento con si debe ser consistente o puede variar:",
+          "conceptTag": "consistencia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Logo",
+            "Contenido del mensaje",
+            "Paleta de colores",
+            "Tipografía"
+          ],
+          "rightColumn": [
+            "Puede variar",
+            "Debe ser consistente",
+            "Debe ser consistente",
+            "Debe ser consistente"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 0,
+            "2": 2,
+            "3": 3
+          },
+          "feedbackCorrect": "¡Perfecto! Logo, colores y tipografía deben ser consistentes. El contenido puede cambiar.",
+          "feedbackWrong": "Consistente: logo, colores, tipografía. Variable: contenido del mensaje."
+        },
+        {
+          "id": "ex-1-5-4",
+          "type": "fill_blank",
+          "prompt": "Completá: Un ___ de diseño es un conjunto de reglas que aseguran consistencia visual.",
+          "sentence": "Un ___ de diseño es un conjunto de reglas que aseguran consistencia visual.",
+          "conceptTag": "consistencia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctAnswer": "sistema",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Un sistema (o design system) mantiene todo consistente.",
+          "feedbackWrong": "La respuesta es 'sistema'. Los sistemas de diseño documentan reglas de consistencia."
+        },
+        {
+          "id": "ex-1-5-5",
+          "type": "choose_design",
+          "prompt": "Si este es el cartel principal, ¿cuál mantiene mejor la consistencia?",
+          "conceptTag": "consistencia",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-original",
+              "label": "Cartel Original",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "Cerveza artesanal",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 32, "subtitle": 18 }
+              }
+            },
+            {
+              "id": "design-inconsistent",
+              "label": "Opción A (nuevo)",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Última Pixel Taberna",
+                "subtitle": "CERVEZA ARTESANAL",
+                "backgroundColor": "#FF0000",
+                "textColor": "#00FF00",
+                "fontSize": { "title": 24, "subtitle": 24 }
+              }
+            },
+            {
+              "id": "design-consistent",
+              "label": "Opción B (nuevo)",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "Música en vivo • Viernes y Sábados",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 32, "subtitle": 18 }
+              }
+            }
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Perfecto! La opción B mantiene colores, tipografía y jerarquía consistentes.",
+          "feedbackWrong": "La opción A cambia todo (colores, nombre, tipografía). La B mantiene la identidad visual."
+        },
+        {
+          "id": "ex-1-5-6",
+          "type": "multiple_choice",
+          "prompt": "¿Qué pasa si no mantenés consistencia en tus diseños?",
+          "conceptTag": "consistencia",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Nada, está bien variar",
+            "La gente se confunde y no reconoce tu marca",
+            "Se ve más creativo",
+            "Ahorrás tiempo"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! La inconsistencia confunde y debilita el reconocimiento de marca.",
+          "feedbackWrong": "Sin consistencia, la gente no asocia tus diseños con tu marca. Genera confusión."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-6",
+      "worldId": "world-1",
+      "order": 6,
+      "title": "Accesibilidad Básica",
+      "description": "Diseñá para todos",
+      "narrativeIntro": "Un cliente mayor le dijo al tabernero: 'No puedo leer tu cartel, las letras son muy claras sobre fondo claro'. Aprendé accesibilidad básica.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-5",
+      "exercises": [
+        {
+          "id": "ex-1-6-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es la accesibilidad en diseño?",
+          "conceptTag": "accesibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Hacer diseños bonitos",
+            "Diseñar para que todos puedan usar y entender, incluyendo personas con discapacidades",
+            "Usar colores brillantes",
+            "Hacer todo gratis"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! Accesibilidad = diseñar para que todos puedan usar tu producto.",
+          "feedbackWrong": "Accesibilidad significa que todos, incluyendo personas con discapacidades, puedan usar tu diseño."
+        },
+        {
+          "id": "ex-1-6-2",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel es más accesible para personas con baja visión?",
+          "conceptTag": "accesibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-low-access",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna Abierta",
+                "subtitle": "Visitanos",
+                "backgroundColor": "#EEEEEE",
+                "textColor": "#CCCCCC",
+                "fontSize": { "title": 20, "subtitle": 14 }
+              }
+            },
+            {
+              "id": "design-high-access",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna Abierta",
+                "subtitle": "Visitanos",
+                "backgroundColor": "#000000",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 40, "subtitle": 24 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Perfecto! La opción B tiene alto contraste y texto grande, ideal para baja visión.",
+          "feedbackWrong": "La opción A tiene bajo contraste y texto pequeño. La B es mucho más accesible."
+        },
+        {
+          "id": "ex-1-6-3",
+          "type": "fill_blank",
+          "prompt": "Completá: El ___ entre texto y fondo debe ser alto para que personas con baja visión puedan leer.",
+          "sentence": "El ___ entre texto y fondo debe ser alto para que personas con baja visión puedan leer.",
+          "conceptTag": "accesibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "contraste",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Contraste alto = accesible.",
+          "feedbackWrong": "La palabra es 'contraste'. El contraste alto ayuda a todos, especialmente a personas con baja visión."
+        },
+        {
+          "id": "ex-1-6-4",
+          "type": "match_pairs",
+          "prompt": "Uní cada principio de accesibilidad con su beneficio:",
+          "conceptTag": "accesibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Alto contraste",
+            "Texto simple y claro",
+            "Tamaño de fuente grande",
+            "Iconos + texto"
+          ],
+          "rightColumn": [
+            "Ayuda a personas con discapacidad cognitiva",
+            "Ayuda a personas con baja visión",
+            "Ayuda a personas que no hablan el idioma",
+            "Ayuda a personas con daltonismo"
+          ],
+          "correctPairs": {
+            "0": 3,
+            "1": 0,
+            "2": 1,
+            "3": 2
+          },
+          "feedbackCorrect": "¡Excelente! Cada práctica ayuda a diferentes grupos.",
+          "feedbackWrong": "Contraste = daltonismo; Texto simple = cognitivo; Texto grande = baja visión; Iconos = idioma."
+        },
+        {
+          "id": "ex-1-6-5",
+          "type": "multiple_choice",
+          "prompt": "¿Cuál NO es una buena práctica de accesibilidad?",
+          "conceptTag": "accesibilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "Usar lenguaje claro y simple",
+            "Depender solo del color para comunicar información importante",
+            "Proveer suficiente contraste",
+            "Usar tamaños de texto legibles"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! No dependas solo del color. Personas con daltonismo no lo verán.",
+          "feedbackWrong": "Depender solo del color excluye a personas con daltonismo. Usá color + texto/iconos."
+        },
+        {
+          "id": "ex-1-6-6",
+          "type": "highlight",
+          "prompt": "Seleccioná el texto más accesible (simple y claro):",
+          "content": "Se solicita la presencia de comensales en nuestro establecimiento gastronómico | Vení a comer a nuestra taberna",
+          "conceptTag": "accesibilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctHighlight": "Vení a comer a nuestra taberna",
+          "feedbackCorrect": "¡Bien! El lenguaje simple es más accesible para todos.",
+          "feedbackWrong": "La primera opción usa lenguaje rebuscado. La segunda es clara y directa."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-7",
+      "worldId": "world-1",
+      "order": 7,
+      "title": "Copy Claro",
+      "description": "Escribí mensajes efectivos",
+      "narrativeIntro": "El tabernero puso un cartel que dice 'Experiencia culinaria premium'. Nadie entró. Aprendé a escribir copy que funcione.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-6",
+      "exercises": [
+        {
+          "id": "ex-1-7-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es 'copy' en diseño?",
+          "conceptTag": "copy",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Copiar diseños de otros",
+            "El texto escrito que acompaña al diseño",
+            "Hacer backup de archivos",
+            "Duplicar elementos"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! Copy es el texto que escribís en tu diseño.",
+          "feedbackWrong": "'Copy' se refiere al texto escrito: títulos, descripciones, llamados a la acción, etc."
+        },
+        {
+          "id": "ex-1-7-2",
+          "type": "highlight",
+          "prompt": "Seleccioná el copy MÁS claro para un cartel de taberna:",
+          "content": "Establecimiento gastronómico con opciones etílicas | Comida y bebida",
+          "conceptTag": "copy",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctHighlight": "Comida y bebida",
+          "feedbackCorrect": "¡Perfecto! Simple y directo. Todos entienden.",
+          "feedbackWrong": "El primer texto es rebuscado. 'Comida y bebida' es claro para todos."
+        },
+        {
+          "id": "ex-1-7-3",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel tiene mejor copy (más claro y accionable)?",
+          "conceptTag": "copy",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-vague-copy",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna Premium",
+                "subtitle": "Experiencia única",
+                "bodyText": "Te esperamos",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 32, "subtitle": 18, "body": 14 }
+              }
+            },
+            {
+              "id": "design-clear-copy",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna del Último Pixel",
+                "subtitle": "Cerveza fría • Comida casera",
+                "cta": "Entrá ahora",
+                "backgroundColor": "#2C1810",
+                "textColor": "#F4E4C1",
+                "fontSize": { "title": 32, "subtitle": 18 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Excelente! La opción B es específica y tiene un llamado a la acción claro.",
+          "feedbackWrong": "La opción A es vaga ('experiencia única' no dice nada). La B es concreta y directa."
+        },
+        {
+          "id": "ex-1-7-4",
+          "type": "fill_blank",
+          "prompt": "Completá: Un buen copy debe ser ___, claro y enfocado en el beneficio para el usuario.",
+          "sentence": "Un buen copy debe ser ___, claro y enfocado en el beneficio para el usuario.",
+          "conceptTag": "copy",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "corto",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! Corto, claro y centrado en el usuario.",
+          "feedbackWrong": "La palabra es 'corto'. El copy efectivo es breve y va al punto."
+        },
+        {
+          "id": "ex-1-7-5",
+          "type": "match_pairs",
+          "prompt": "Uní cada copy problemático con su versión mejorada:",
+          "conceptTag": "copy",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Experiencia gastronómica premium",
+            "Disponible para consumo",
+            "Establecimiento abierto",
+            "Solicite información"
+          ],
+          "rightColumn": [
+            "Comida casera rica",
+            "Entrá",
+            "Preguntanos",
+            "¡Abierto!"
+          ],
+          "correctPairs": {
+            "0": 0,
+            "1": 1,
+            "2": 3,
+            "3": 2
+          },
+          "feedbackCorrect": "¡Perfecto! Cada versión mejorada es más clara y directa.",
+          "feedbackWrong": "La clave es simplicidad: gastronómico→casera; disponible→entrá; establecimiento→abierto; solicite→preguntanos."
+        },
+        {
+          "id": "ex-1-7-6",
+          "type": "multiple_choice",
+          "prompt": "¿Cuál es el mejor llamado a la acción (CTA) para un cartel de taberna?",
+          "conceptTag": "copy",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "Considere visitarnos",
+            "¡Entrá ahora!",
+            "Puede acercarse si gusta",
+            "Estamos disponibles"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! '¡Entrá ahora!' es directo, activo y urgente.",
+          "feedbackWrong": "Los otros CTAs son pasivos y débiles. '¡Entrá ahora!' es claro y accionable."
+        },
+        {
+          "id": "ex-1-7-7",
+          "type": "reorder",
+          "prompt": "Ordená estos elementos del copy de más a menos importante en un cartel:",
+          "conceptTag": "copy",
+          "difficulty": 2,
+          "xpReward": 15,
+          "items": [
+            "Qué ofrece (beneficio principal)",
+            "Dirección completa con código postal",
+            "Nombre del lugar",
+            "Llamado a la acción"
+          ],
+          "correctOrder": [2, 0, 3, 1],
+          "feedbackCorrect": "¡Perfecto! Nombre → beneficio → acción → detalles.",
+          "feedbackWrong": "Lo más importante: nombre → qué ofrece → acción → dirección completa."
+        }
+      ]
+    },
+    {
+      "id": "lesson-1-8",
+      "worldId": "world-1",
+      "order": 8,
+      "title": "Test Final: A/B Testing",
+      "description": "Evaluá y elegí el mejor diseño",
+      "narrativeIntro": "El tabernero tiene 2 carteles listos. Debés elegir cuál funciona mejor usando todo lo que aprendiste. ¡Es tu momento!",
+      "xpReward": 100,
+      "unlockRequirement": "lesson-1-7",
+      "exercises": [
+        {
+          "id": "ex-1-8-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es el A/B testing en diseño?",
+          "conceptTag": "evaluacion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Elegir entre dos fuentes",
+            "Comparar dos versiones de un diseño para ver cuál funciona mejor",
+            "Hacer dos diseños iguales",
+            "Testear accesibilidad"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! A/B testing compara dos versiones para ver cuál rinde mejor.",
+          "feedbackWrong": "A/B testing es comparar dos versiones (A y B) para determinar cuál es más efectiva."
+        },
+        {
+          "id": "ex-1-8-2",
+          "type": "choose_design",
+          "prompt": "El tabernero quiere atraer más clientes. ¿Qué cartel es más efectivo considerando TODOS los principios que aprendiste?",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "designs": [
+            {
+              "id": "design-bad",
+              "label": "Cartel A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "TABERNA",
+                "subtitle": "Ofrecemos experiencia gastronómica premium con ingredientes selectos, carta de vinos importados, ambiente acogedor para toda la familia, música ambiente relajante.",
+                "backgroundColor": "#CCCCCC",
+                "textColor": "#AAAAAA",
+                "fontSize": { "title": 24, "subtitle": 12 }
+              }
+            },
+            {
+              "id": "design-good",
+              "label": "Cartel B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "La Taberna del Último Pixel",
+                "subtitle": "• Cerveza artesanal fría\n• Comida casera rica\n• Música en vivo (Vie-Sáb)",
+                "cta": "¡Entrá ahora!",
+                "backgroundColor": "#1A1A1A",
+                "textColor": "#F5F5F5",
+                "fontSize": { "title": 36, "subtitle": 18 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡PERFECTO! El cartel B aplica TODO: legibilidad, jerarquía, escaneabilidad, consistencia, accesibilidad y copy claro.",
+          "feedbackWrong": "El cartel A falla en: contraste (ilegible), copy (rebuscado), escaneabilidad (bloque de texto), jerarquía (todo pequeño). El B aplica todos los principios."
+        },
+        {
+          "id": "ex-1-8-3",
+          "type": "match_pairs",
+          "prompt": "Analizá el cartel ganador. Uní cada principio con cómo se aplicó:",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "leftColumn": [
+            "Legibilidad",
+            "Jerarquía",
+            "Escaneabilidad",
+            "Copy claro"
+          ],
+          "rightColumn": [
+            "Usa bullets y texto corto",
+            "Alto contraste (negro/blanco) + texto grande",
+            "Título grande, subtítulo mediano",
+            "Palabras simples y directas"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 2,
+            "2": 0,
+            "3": 3
+          },
+          "feedbackCorrect": "¡EXCELENTE! Identificaste cómo cada principio se aplicó en el diseño ganador.",
+          "feedbackWrong": "Legibilidad=contraste+tamaño; Jerarquía=tamaños diferentes; Escaneabilidad=bullets; Copy=simple."
+        },
+        {
+          "id": "ex-1-8-4",
+          "type": "multiple_choice",
+          "prompt": "Después de una semana, el cartel B atrajo 3x más clientes que el A. ¿Por qué?",
+          "conceptTag": "evaluacion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "Tuvo suerte",
+            "Aplicó principios de UX/UI correctamente",
+            "Era más grande",
+            "Tenía más colores"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡CORRECTO! Los principios de diseño no son decoración, SON EFECTIVOS.",
+          "feedbackWrong": "No fue suerte. El cartel B funcionó porque aplicó legibilidad, jerarquía, copy claro, etc."
+        },
+        {
+          "id": "ex-1-8-5",
+          "type": "fill_blank",
+          "prompt": "Completá: El buen diseño no es solo estético, debe ser ___ y cumplir un objetivo.",
+          "sentence": "El buen diseño no es solo estético, debe ser ___ y cumplir un objetivo.",
+          "conceptTag": "evaluacion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctAnswer": "funcional",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡PERFECTO! Funcional = que funcione y resuelva el problema del usuario.",
+          "feedbackWrong": "La palabra es 'funcional'. El diseño debe verse bien Y funcionar bien."
+        },
+        {
+          "id": "ex-1-8-6",
+          "type": "reorder",
+          "prompt": "Ordená el proceso completo de diseño del cartel (de principio a fin):",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "items": [
+            "1. Entender el problema (taberna sin clientes)",
+            "2. Definir el mensaje (qué comunica el cartel)",
+            "3. Aplicar principios de diseño (legibilidad, jerarquía, etc.)",
+            "4. Testear con usuarios (A/B test)",
+            "5. Iterar basado en resultados"
+          ],
+          "correctOrder": [0, 1, 2, 3, 4],
+          "feedbackCorrect": "¡PERFECTO! Este ES el proceso de diseño UX: entender → definir → diseñar → testear → iterar.",
+          "feedbackWrong": "El orden correcto refleja el proceso de Design Thinking: problema → mensaje → diseño → test → mejora."
+        },
+        {
+          "id": "ex-1-8-7",
+          "type": "multiple_choice",
+          "prompt": "¿Qué aprendiste en este mundo?",
+          "conceptTag": "evaluacion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Que el diseño bonito es suficiente",
+            "Que el diseño debe resolver problemas reales aplicando principios claros",
+            "Que no importa el usuario",
+            "Que solo importa la creatividad"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "🎉 ¡FELICITACIONES! Completaste el Mundo 1. Aprendiste los fundamentos de UX/UI aplicados.",
+          "feedbackWrong": "El diseño NO es solo arte. Es resolver problemas aplicando principios (legibilidad, jerarquía, etc.) pensando en el usuario."
+        }
+      ]
+    }
+  ]
+}
