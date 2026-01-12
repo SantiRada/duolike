@@ -159,6 +159,27 @@
       "unlockRequirement": "lesson-1-1",
       "exercises": [
         {
+          "id": "theory-1-2-1",
+          "type": "theory",
+          "title": "Tamaños de Fuente para Distancia",
+          "conceptTag": "legibilidad",
+          "xpReward": 5,
+          "content": [
+            "El tamaño ideal para un cartel visible a 3 metros de distancia es de 48-72px como mínimo. Esto se debe al ángulo visual necesario para que el ojo humano pueda distinguir caracteres individuales sin esfuerzo.",
+            "Para distancias mayores (5-10 metros), se recomienda 120px o más. Lugares como supermercados usan 180-240px en carteles de ofertas porque necesitan ser visibles desde el fondo del pasillo (15+ metros).",
+            "La regla práctica: por cada metro adicional de distancia, duplicá el tamaño base. Un cartel a 6 metros necesita el doble que uno a 3 metros."
+          ],
+          "examples": [
+            "Cartel de taberna a 3m de la vereda: título 60px, subtítulo 24px",
+            "Billboard en ruta a 30m: título 300px+, visible a 100km/h"
+          ],
+          "keyTakeaways": [
+            "3 metros = 48-72px mínimo",
+            "Cada metro adicional duplica el tamaño necesario",
+            "Siempre testear a la distancia real de uso"
+          ]
+        },
+        {
           "id": "ex-1-2-1",
           "type": "multiple_choice",
           "prompt": "¿Qué hace que un texto sea más legible?",
@@ -292,6 +313,27 @@
       "xpReward": 50,
       "unlockRequirement": "lesson-1-2",
       "exercises": [
+        {
+          "id": "theory-1-3-1",
+          "type": "theory",
+          "title": "Ratios de Jerarquía Tipográfica",
+          "conceptTag": "jerarquia",
+          "xpReward": 5,
+          "content": [
+            "La jerarquía efectiva usa ratios matemáticos específicos entre niveles de texto. El ratio más usado es 1.5x (escala mayor tercera) o 1.618x (proporción áurea).",
+            "Si tu título principal es 48px, tu subtítulo debería ser 32px (48/1.5) y tu texto de detalle 21px (32/1.5). Esto crea una progresión visual clara y natural para el ojo.",
+            "Algunos diseñadores prefieren el ratio 2x para carteles (más dramático): 60px → 30px → 15px. La clave es mantener consistencia en el ratio elegido en todo el sistema."
+          ],
+          "examples": [
+            "Ratio 1.5x: Título 60px, Subtítulo 40px, Cuerpo 27px, Detalles 18px",
+            "Ratio 2x (alto impacto): Título 72px, Subtítulo 36px, Cuerpo 18px"
+          ],
+          "keyTakeaways": [
+            "Usar ratios consistentes (1.5x o 1.618x son estándar)",
+            "Más contraste de tamaño = más jerarquía visual",
+            "Mantener el mismo ratio en todo el diseño"
+          ]
+        },
         {
           "id": "ex-1-3-1",
           "type": "multiple_choice",
@@ -436,6 +478,27 @@
       "unlockRequirement": "lesson-1-3",
       "exercises": [
         {
+          "id": "theory-1-4-1",
+          "type": "theory",
+          "title": "El Patrón F y los 3 Segundos",
+          "conceptTag": "escaneabilidad",
+          "xpReward": 5,
+          "content": [
+            "Los estudios de eye-tracking muestran que las personas escanean contenido en forma de 'F': primero leen horizontal arriba, luego bajan y leen menos, luego escanean verticalmente el lado izquierdo.",
+            "Tenés solo 3-5 segundos para captar atención antes de que la persona siga caminando. Por eso la información crítica debe estar en las primeras 2 líneas y usar bullets para el resto.",
+            "La regla del 'chunk 7±2': el cerebro humano procesa mejor información dividida en grupos de 5-9 items. Si tenés más de 7 puntos, agrupálos en categorías."
+          ],
+          "examples": [
+            "Mal: párrafo de 12 líneas corridas → Bien: 3 bullets de 2 líneas cada uno",
+            "Cartel efectivo: Título (1s), 3 bullets (2s), CTA (1s) = 4 segundos totales"
+          ],
+          "keyTakeaways": [
+            "Patrón F: info crítica arriba y a la izquierda",
+            "Máximo 3-5 segundos de atención",
+            "Dividir en chunks de 5-7 items máximo"
+          ]
+        },
+        {
           "id": "ex-1-4-1",
           "type": "multiple_choice",
           "prompt": "¿Por qué es importante que un cartel sea escaneable?",
@@ -572,6 +635,27 @@
       "xpReward": 50,
       "unlockRequirement": "lesson-1-4",
       "exercises": [
+        {
+          "id": "theory-1-5-1",
+          "type": "theory",
+          "title": "Design Systems: Los 3 Pilares",
+          "conceptTag": "consistencia",
+          "xpReward": 5,
+          "content": [
+            "Un Design System profesional se basa en 3 pilares: Paleta de Colores (máximo 5 colores: primario, secundario, acento, fondo, texto), Tipografía (máximo 2 familias: una para títulos, una para cuerpo), y Espaciado (sistema de múltiplos de 8px: 8, 16, 24, 32...).",
+            "Empresas como Google, Airbnb y Uber documentan cada decisión en un manual de marca. Cuando un diseñador nuevo entra, sigue el sistema y todo se ve consistente automáticamente.",
+            "La regla del 80/20: definí bien el 20% de los componentes base (botones, cards, tipografía, colores) y podrás crear el 80% de tus diseños rápidamente y con consistencia."
+          ],
+          "examples": [
+            "Paleta básica: #2C1810 (fondo oscuro), #F4E4C1 (texto claro), #58CC02 (acento)",
+            "Sistema de espaciado: padding siempre 8, 16, o 24px (nunca 15 o 23px)"
+          ],
+          "keyTakeaways": [
+            "Máximo 5 colores, 2 tipografías",
+            "Espaciado en múltiplos de 8px",
+            "Documentar decisiones para mantener consistencia"
+          ]
+        },
         {
           "id": "ex-1-5-1",
           "type": "multiple_choice",
@@ -721,6 +805,27 @@
       "unlockRequirement": "lesson-1-5",
       "exercises": [
         {
+          "id": "theory-1-6-1",
+          "type": "theory",
+          "title": "Ratios de Contraste WCAG",
+          "conceptTag": "accesibilidad",
+          "xpReward": 5,
+          "content": [
+            "El estándar WCAG (Web Content Accessibility Guidelines) define ratios de contraste mínimos: 4.5:1 para texto normal y 3:1 para texto grande (18px+ o 14px bold). Esto asegura legibilidad para personas con baja visión.",
+            "Ejemplo práctico: texto #777777 sobre fondo #FFFFFF tiene ratio 4.5:1 (apenas pasa). Pero texto #FFFFFF sobre #000000 tiene ratio 21:1 (excelente). Herramientas como WebAIM Contrast Checker te ayudan a verificar.",
+            "Para daltonismo, nunca uses solo color para transmitir info. Ejemplo: en un gráfico, no digas 'rojo = error, verde = éxito'. Usá rojo + ícono X, verde + ícono ✓."
+          ],
+          "examples": [
+            "Ratio 4.5:1 (mínimo): #595959 sobre #FFFFFF",
+            "Ratio 7:1 (AAA, ideal): #4D4D4D sobre #FFFFFF o #FFFFFF sobre #000000"
+          ],
+          "keyTakeaways": [
+            "WCAG AA: mínimo 4.5:1 para texto normal",
+            "WCAG AAA: 7:1 para mayor accesibilidad",
+            "Nunca depender solo del color, siempre agregar íconos/texto"
+          ]
+        },
+        {
           "id": "ex-1-6-1",
           "type": "multiple_choice",
           "prompt": "¿Qué es la accesibilidad en diseño?",
@@ -856,6 +961,27 @@
       "xpReward": 50,
       "unlockRequirement": "lesson-1-6",
       "exercises": [
+        {
+          "id": "theory-1-7-1",
+          "type": "theory",
+          "title": "Fórmula de Copy Efectivo",
+          "conceptTag": "copy",
+          "xpReward": 5,
+          "content": [
+            "La fórmula AIDA para copy efectivo: Atención (título impactante), Interés (beneficio claro), Deseo (por qué lo necesitás), Acción (qué hacer ahora). Un cartel debe cumplir las 4 en 3 segundos.",
+            "Regla de palabras: máximo 7 palabras en el título, 15 en el subtítulo. Cada palabra extra reduce la probabilidad de que lean todo en un 20%. 'Cerveza fría' (2 palabras) funciona mejor que 'Disponemos de bebidas alcohólicas fermentadas a temperatura baja' (9 palabras).",
+            "Los verbos activos convierten mejor que los pasivos: 'Entrá ahora' (activo, 2 palabras) vs 'Puede ser visitado' (pasivo, 4 palabras). El primero genera 3x más acción según estudios de marketing."
+          ],
+          "examples": [
+            "AIDA aplicado: 'Cerveza Fría' (A), '+ Comida Casera' (I+D), 'Entrá' (A)",
+            "Mal: 'Nuestro establecimiento ofrece...' → Bien: 'Comida casera rica'"
+          ],
+          "keyTakeaways": [
+            "Fórmula AIDA: Atención → Interés → Deseo → Acción",
+            "Máximo 7 palabras en título, 15 en subtítulo",
+            "Verbos activos > pasivos (3x más efectivos)"
+          ]
+        },
         {
           "id": "ex-1-7-1",
           "type": "multiple_choice",
@@ -1010,6 +1136,8 @@
       "narrativeIntro": "El tabernero tiene 2 carteles listos. Debés elegir cuál funciona mejor usando todo lo que aprendiste. ¡Es tu momento!",
       "xpReward": 100,
       "unlockRequirement": "lesson-1-7",
+      "isChapterTest": true,
+      "achievementReward": "chapter-1-complete",
       "exercises": [
         {
           "id": "ex-1-8-1",
@@ -1158,6 +1286,717 @@
           "correctAnswer": 1,
           "feedbackCorrect": "🎉 ¡FELICITACIONES! Completaste el Mundo 1. Aprendiste los fundamentos de UX/UI aplicados.",
           "feedbackWrong": "El diseño NO es solo arte. Es resolver problemas aplicando principios (legibilidad, jerarquía, etc.) pensando en el usuario."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-1",
+      "worldId": "world-1",
+      "order": 9,
+      "title": "Espaciado y Aire",
+      "description": "Respirá tu diseño",
+      "narrativeIntro": "El tabernero rediseñó el menú pero está todo apretado. 'Se ve desordenado', dice. Aprendé cómo el espacio en blanco mejora la experiencia.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-1-8",
+      "exercises": [
+        {
+          "id": "theory-2-1-1",
+          "type": "theory",
+          "title": "La Regla del 8px y el Espacio Negativo",
+          "conceptTag": "espaciado",
+          "xpReward": 5,
+          "content": [
+            "El espaciado en múltiplos de 8px (8, 16, 24, 32, 40...) es un estándar de la industria porque la mayoría de pantallas modernas tienen resoluciones divisibles por 8. Esto asegura renderizado perfecto sin bordes borrosos.",
+            "El espacio negativo (whitespace) no es 'espacio desperdiciado'. Aumentar el padding de 16px a 24px puede mejorar la comprensión en un 20% según estudios de Nielsen Norman Group, porque el cerebro procesa mejor elementos separados.",
+            "Regla práctica: el espacio entre elementos relacionados debe ser menor que el espacio entre grupos. Ejemplo: items de una lista separados por 8px, grupos de listas separados por 24px."
+          ],
+          "examples": [
+            "Mal: padding 13px, margin 19px → Bien: padding 16px, margin 24px",
+            "Card con padding 16px es legible, con 32px es premium"
+          ],
+          "keyTakeaways": [
+            "Usar múltiplos de 8px para consistencia",
+            "Más espacio = mejor comprensión (hasta cierto punto)",
+            "Espaciado relacional: cerca = relacionado, lejos = separado"
+          ]
+        },
+        {
+          "id": "ex-2-1-1",
+          "type": "multiple_choice",
+          "prompt": "¿Para qué sirve el espacio en blanco (whitespace)?",
+          "conceptTag": "espaciado",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Para rellenar cuando no hay contenido",
+            "Para mejorar la legibilidad y organizar visualmente el contenido",
+            "Para hacer el diseño más grande",
+            "No sirve para nada"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! El espacio en blanco organiza y mejora la comprensión.",
+          "feedbackWrong": "El whitespace es una herramienta activa de diseño, no desperdicio."
+        },
+        {
+          "id": "ex-2-1-2",
+          "type": "choose_design",
+          "prompt": "¿Qué menú tiene mejor uso de espaciado?",
+          "conceptTag": "espaciado",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-cramped",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "MENÚ",
+                "subtitle": "Cerveza 500\nVino 600\nComida 800\nPostre 400",
+                "backgroundColor": "#F4E4C1",
+                "textColor": "#2C1810",
+                "fontSize": { "title": 24, "subtitle": 14 }
+              }
+            },
+            {
+              "id": "design-spaced",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "MENÚ",
+                "subtitle": "Cerveza .............. 500\n\nVino ................... 600\n\nComida ............. 800",
+                "backgroundColor": "#F4E4C1",
+                "textColor": "#2C1810",
+                "fontSize": { "title": 28, "subtitle": 16 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Bien! La opción B usa espacio para separar y guiar la vista.",
+          "feedbackWrong": "La opción A está apretada. La B respira mejor y es más fácil de leer."
+        },
+        {
+          "id": "ex-2-1-3",
+          "type": "fill_blank",
+          "prompt": "Completá: El espaciado debe usar múltiplos de ___ px para consistencia en pantallas modernas.",
+          "sentence": "El espaciado debe usar múltiplos de ___ px para consistencia en pantallas modernas.",
+          "conceptTag": "espaciado",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "8",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! 8px es el estándar (8, 16, 24, 32...).",
+          "feedbackWrong": "El número es 8. Múltiplos de 8px aseguran renderizado perfecto."
+        },
+        {
+          "id": "ex-2-1-4",
+          "type": "match_pairs",
+          "prompt": "Uní cada problema de espaciado con su solución:",
+          "conceptTag": "espaciado",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Texto apretado difícil de leer",
+            "No se distinguen grupos",
+            "Padding inconsistente",
+            "Demasiado espacio vacío"
+          ],
+          "rightColumn": [
+            "Agrupar más, contenido más denso",
+            "Aumentar line-height a 1.5x",
+            "Aumentar espacio entre grupos",
+            "Usar múltiplos de 8px"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 2,
+            "2": 3,
+            "3": 0
+          },
+          "feedbackCorrect": "¡Perfecto! Cada problema tiene una solución clara.",
+          "feedbackWrong": "Texto apretado → line-height; Grupos → más espacio; Inconsistencia → 8px; Mucho vacío → agrupar."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-2",
+      "worldId": "world-1",
+      "order": 10,
+      "title": "Peso Visual",
+      "description": "Balanceá elementos en la composición",
+      "narrativeIntro": "El nuevo cartel se ve 'torcido' aunque todo está alineado. El tabernero no entiende por qué. Es momento de aprender peso visual.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-2-1",
+      "exercises": [
+        {
+          "id": "theory-2-2-1",
+          "type": "theory",
+          "title": "Peso Visual y Balance Asimétrico",
+          "conceptTag": "composicion",
+          "xpReward": 5,
+          "content": [
+            "El peso visual no es el tamaño real, sino cuánta atención atrae un elemento. Un círculo negro pequeño tiene más peso que un cuadrado gris grande. El color intenso, el contraste alto, y las formas complejas aumentan el peso.",
+            "Balance simétrico (espejo) se ve formal y estático. Balance asimétrico (pesos desiguales balanceados) se ve dinámico y moderno. Ejemplo: logo grande a la izquierda se balancea con texto pequeño a la derecha si el texto tiene más contraste.",
+            "La 'regla de los tercios' divide el canvas en 9 partes (3x3). Colocar elementos importantes en las intersecciones crea balance natural y dinamismo."
+          ],
+          "examples": [
+            "Peso visual: círculo rojo 20px = cuadrado gris 60px en atención",
+            "Logo grande + bajo contraste vs icono pequeño + alto contraste = balanceados"
+          ],
+          "keyTakeaways": [
+            "Peso visual ≠ tamaño físico (color y contraste importan más)",
+            "Balance asimétrico = moderno, simétrico = formal",
+            "Regla de los tercios para composiciones dinámicas"
+          ]
+        },
+        {
+          "id": "ex-2-2-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es el peso visual de un elemento?",
+          "conceptTag": "composicion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "El tamaño en píxeles",
+            "El tamaño del archivo",
+            "Cuánta atención visual atrae",
+            "El grosor del borde"
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Correcto! Peso visual = atención que captura.",
+          "feedbackWrong": "Peso visual no es tamaño físico, es cuánta atención genera."
+        },
+        {
+          "id": "ex-2-2-2",
+          "type": "choose_design",
+          "prompt": "¿Qué cartel tiene mejor balance visual?",
+          "conceptTag": "composicion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-unbalanced",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "TABERNA DEL ÚLTIMO PIXEL",
+                "subtitle": ".",
+                "backgroundColor": "#1A1A1A",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 36, "subtitle": 8 }
+              }
+            },
+            {
+              "id": "design-balanced",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "subtitle": "Cerveza • Comida • Música",
+                "cta": "Entrá",
+                "backgroundColor": "#1A1A1A",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 36, "subtitle": 18 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! La B distribuye el peso visual de forma balanceada.",
+          "feedbackWrong": "La A tiene todo el peso arriba. La B distribuye elementos para mejor balance."
+        },
+        {
+          "id": "ex-2-2-3",
+          "type": "highlight",
+          "prompt": "Seleccioná el elemento con MÁS peso visual:",
+          "content": "Título gris claro grande | Pequeño punto rojo intenso | Texto mediano gris medio",
+          "conceptTag": "composicion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctHighlight": "Pequeño punto rojo intenso",
+          "feedbackCorrect": "¡Bien! El color intenso genera más peso que el tamaño.",
+          "feedbackWrong": "El punto rojo, aunque pequeño, tiene más peso por su color intenso."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-3",
+      "worldId": "world-1",
+      "order": 11,
+      "title": "Psicología del Color",
+      "description": "Usá colores con intención",
+      "narrativeIntro": "El tabernero pintó el cartel de azul brillante. 'No me da hambre, me da frío', dice un cliente. Aprendamos qué comunican los colores.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-2-2",
+      "exercises": [
+        {
+          "id": "theory-2-3-1",
+          "type": "theory",
+          "title": "Significados Culturales del Color",
+          "conceptTag": "color",
+          "xpReward": 5,
+          "content": [
+            "Los colores tienen asociaciones psicológicas: Rojo = urgencia/hambre (McDonald's, KFC), Azul = confianza/tecnología (Facebook, Twitter), Verde = natural/crecimiento (Starbucks, Whole Foods), Amarillo = optimismo/atención (IKEA, Best Buy).",
+            "CUIDADO: los colores cambian según cultura. En occidente, blanco = pureza/bodas; en Asia, blanco = luto/funerales. Siempre investigar el contexto cultural de tu audiencia.",
+            "La regla 60-30-10: 60% color dominante (fondo), 30% color secundario (bloques de contenido), 10% color de acento (botones, highlights). Esto crea balance sin abrumar."
+          ],
+          "examples": [
+            "Restaurante: marrón/naranja (cálido, hambre) > azul (frío, sin apetito)",
+            "App financiera: azul/gris (confianza) > rojo (alarma, riesgo)"
+          ],
+          "keyTakeaways": [
+            "Rojo = urgencia, Azul = confianza, Verde = natural, Amarillo = atención",
+            "Considerar contexto cultural (blanco ≠ mismo significado global)",
+            "Regla 60-30-10 para balance de colores"
+          ]
+        },
+        {
+          "id": "ex-2-3-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué color es más apropiado para un restaurante?",
+          "conceptTag": "color",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Azul frío",
+            "Gris oscuro",
+            "Naranja cálido o marrón",
+            "Violeta intenso"
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Exacto! Colores cálidos estimulan el apetito.",
+          "feedbackWrong": "Azul y colores fríos reducen el apetito. Cálidos como naranja/marrón lo estimulan."
+        },
+        {
+          "id": "ex-2-3-2",
+          "type": "match_pairs",
+          "prompt": "Uní cada color con su asociación psicológica:",
+          "conceptTag": "color",
+          "difficulty": 1,
+          "xpReward": 10,
+          "leftColumn": [
+            "Rojo",
+            "Azul",
+            "Verde",
+            "Amarillo"
+          ],
+          "rightColumn": [
+            "Confianza y tecnología",
+            "Naturaleza y crecimiento",
+            "Urgencia y energía",
+            "Optimismo y atención"
+          ],
+          "correctPairs": {
+            "0": 2,
+            "1": 0,
+            "2": 1,
+            "3": 3
+          },
+          "feedbackCorrect": "¡Perfecto! Cada color comunica emociones diferentes.",
+          "feedbackWrong": "Rojo=urgencia, Azul=confianza, Verde=naturaleza, Amarillo=optimismo."
+        },
+        {
+          "id": "ex-2-3-3",
+          "type": "choose_design",
+          "prompt": "¿Qué paleta de colores es mejor para una taberna acogedora?",
+          "conceptTag": "color",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-cold",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "subtitle": "Comida casera",
+                "backgroundColor": "#0066CC",
+                "textColor": "#CCFFFF",
+                "fontSize": { "title": 32, "subtitle": 18 }
+              }
+            },
+            {
+              "id": "design-warm",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "subtitle": "Comida casera",
+                "backgroundColor": "#8B4513",
+                "textColor": "#FFE4B5",
+                "fontSize": { "title": 32, "subtitle": 18 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Bien! Marrones y tonos cálidos crean ambiente acogedor.",
+          "feedbackWrong": "El azul es frío y poco acogedor para comida. Marrones cálidos funcionan mejor."
+        },
+        {
+          "id": "ex-2-3-4",
+          "type": "fill_blank",
+          "prompt": "Completá: La regla ___-___-___ distribuye colores en 60% dominante, 30% secundario, 10% acento.",
+          "sentence": "La regla ___-___-___ distribuye colores en 60% dominante, 30% secundario, 10% acento.",
+          "conceptTag": "color",
+          "difficulty": 2,
+          "xpReward": 15,
+          "correctAnswer": "60-30-10",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Correcto! 60-30-10 para balance de color.",
+          "feedbackWrong": "La regla es 60-30-10: mayoría dominante, algo de secundario, toques de acento."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-4",
+      "worldId": "world-1",
+      "order": 12,
+      "title": "Affordances y Señales",
+      "description": "Hacé obvio qué es clickeable",
+      "narrativeIntro": "El tabernero puso un código QR sin explicar qué hace. Nadie lo escanea. Aprendé a diseñar elementos que comuniquen su función.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-2-3",
+      "exercises": [
+        {
+          "id": "theory-2-4-1",
+          "type": "theory",
+          "title": "Affordances de Don Norman",
+          "conceptTag": "usabilidad",
+          "xpReward": 5,
+          "content": [
+            "Un 'affordance' es una pista visual que indica cómo usar algo. Botones con sombra parecen clickeables (affordance real). Texto subrayado sugiere link aunque no lo sea (affordance percibida). Don Norman popularizó este concepto en 'The Design of Everyday Things'.",
+            "Los signifiers son señales explícitas: un ícono de flecha en un botón, texto 'Clickeá aquí', un cursor que cambia a manito. Buenos signifiers reducen fricción y errores en 40-60% según estudios de usabilidad.",
+            "En interfaces modernas, los affordances se perdieron con flat design. Ahora DEBEMOS compensar con signifiers claros: texto explicativo, íconos universales, micro-interacciones (hover, animaciones)."
+          ],
+          "examples": [
+            "Mal: rectángulo plano sin señal → Bien: rectángulo + sombra + texto 'Escanear'",
+            "Link sin subrayar + sin color diferente = invisible para 30% de usuarios"
+          ],
+          "keyTakeaways": [
+            "Affordance = pista de cómo usar (sombra = clickeable)",
+            "Signifier = señal explícita (flecha, 'Click aquí')",
+            "Flat design = menos affordances, MÁS signifiers necesarios"
+          ]
+        },
+        {
+          "id": "ex-2-4-1",
+          "type": "multiple_choice",
+          "prompt": "¿Qué es un affordance en diseño?",
+          "conceptTag": "usabilidad",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "El precio de un producto",
+            "Una pista visual que indica cómo usar algo",
+            "Un tipo de tipografía",
+            "El espacio entre elementos"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Correcto! Affordance = pista de función.",
+          "feedbackWrong": "Affordance es una característica que sugiere cómo interactuar con un elemento."
+        },
+        {
+          "id": "ex-2-4-2",
+          "type": "choose_design",
+          "prompt": "¿Qué diseño comunica mejor que el QR es escaneable?",
+          "conceptTag": "usabilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "designs": [
+            {
+              "id": "design-no-signifier",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "bodyText": "[QR]",
+                "backgroundColor": "#F4E4C1",
+                "textColor": "#2C1810",
+                "fontSize": { "title": 28, "body": 48 }
+              }
+            },
+            {
+              "id": "design-with-signifier",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Taberna",
+                "subtitle": "Escaneá para ver el menú →",
+                "bodyText": "[QR]",
+                "backgroundColor": "#F4E4C1",
+                "textColor": "#2C1810",
+                "fontSize": { "title": 28, "subtitle": 14, "body": 48 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Perfecto! La B usa signifiers claros (texto + flecha).",
+          "feedbackWrong": "La A no explica qué hacer. La B usa texto claro para indicar la acción."
+        },
+        {
+          "id": "ex-2-4-3",
+          "type": "match_pairs",
+          "prompt": "Uní cada elemento con su mejor affordance/signifier:",
+          "conceptTag": "usabilidad",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "Botón",
+            "Link",
+            "Campo de texto",
+            "Elemento draggable"
+          ],
+          "rightColumn": [
+            "Borde + placeholder 'Escribí aquí'",
+            "Sombra + esquinas redondeadas",
+            "Subrayado + color diferente",
+            "Ícono de 6 puntos (grip)"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 2,
+            "2": 0,
+            "3": 3
+          },
+          "feedbackCorrect": "¡Excelente! Cada elemento tiene signifiers apropiados.",
+          "feedbackWrong": "Botón=sombra, Link=subrayado, Input=borde/placeholder, Drag=grip."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-5",
+      "worldId": "world-1",
+      "order": 13,
+      "title": "Feedback y Estados",
+      "description": "Comunicá qué está pasando",
+      "narrativeIntro": "Un cliente tocó el código QR y nada pasó (su cámara estaba apagada). Se fue frustrado. Aprendé a dar feedback claro en tiempo real.",
+      "xpReward": 50,
+      "unlockRequirement": "lesson-2-4",
+      "exercises": [
+        {
+          "id": "theory-2-5-1",
+          "type": "theory",
+          "title": "Los 4 Estados Críticos de UI",
+          "conceptTag": "interaccion",
+          "xpReward": 5,
+          "content": [
+            "Todo elemento interactivo debe tener 4 estados visuales: Default (normal), Hover (mouse encima), Active/Pressed (clickeando), Disabled (no disponible). Esto da feedback inmediato de que el sistema responde.",
+            "El tiempo importa: feedback en 0.1s se siente instantáneo, 1s se siente lento, 10s requiere barra de progreso. La 'regla de los 3 segundos' dice que sin feedback en 3s, el usuario asume que algo falló.",
+            "Micro-interacciones son feedbacks sutiles: botón que cambia de color al hover, ícono que rebota al cargar, sonido de 'click'. Estas pequeñas respuestas aumentan la satisfacción en 25% según investigación de Google."
+          ],
+          "examples": [
+            "Botón: default #58CC02, hover #6EE002, pressed #4AB002, disabled #A0A0A0",
+            "Sin feedback en 3s = usuario clickea 3 veces más (frustrante)"
+          ],
+          "keyTakeaways": [
+            "4 estados: Default, Hover, Active, Disabled (todos deben verse diferente)",
+            "0.1s = instantáneo, 1s = aceptable, 3s = límite de paciencia",
+            "Micro-interacciones mejoran satisfacción 25%"
+          ]
+        },
+        {
+          "id": "ex-2-5-1",
+          "type": "multiple_choice",
+          "prompt": "¿Cuántos estados visuales debe tener un botón interactivo?",
+          "conceptTag": "interaccion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "1 (solo default)",
+            "2 (default y hover)",
+            "4 (default, hover, active, disabled)",
+            "No importa"
+          ],
+          "correctAnswer": 2,
+          "feedbackCorrect": "¡Correcto! Mínimo 4 estados para feedback claro.",
+          "feedbackWrong": "Un botón bien diseñado tiene 4 estados para comunicar interactividad."
+        },
+        {
+          "id": "ex-2-5-2",
+          "type": "fill_blank",
+          "prompt": "Completá: Sin feedback en ___ segundos, el usuario asume que algo falló.",
+          "sentence": "Sin feedback en ___ segundos, el usuario asume que algo falló.",
+          "conceptTag": "interaccion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "correctAnswer": "3",
+          "caseSensitive": false,
+          "feedbackCorrect": "¡Exacto! 3 segundos es el límite de paciencia.",
+          "feedbackWrong": "Son 3 segundos. Después de eso, el usuario piensa que no funcionó."
+        },
+        {
+          "id": "ex-2-5-3",
+          "type": "reorder",
+          "prompt": "Ordená estos tiempos de respuesta de mejor a peor experiencia:",
+          "conceptTag": "interaccion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "items": [
+            "0.1 segundos (instantáneo)",
+            "1 segundo (aceptable)",
+            "3 segundos (límite)",
+            "10 segundos sin feedback (frustración)"
+          ],
+          "correctOrder": [0, 1, 2, 3],
+          "feedbackCorrect": "¡Perfecto! Más rápido siempre es mejor para UX.",
+          "feedbackWrong": "Instantáneo (0.1s) es ideal, 1s es bueno, 3s es límite, 10s es inaceptable."
+        },
+        {
+          "id": "ex-2-5-4",
+          "type": "match_pairs",
+          "prompt": "Uní cada tiempo de respuesta con su acción recomendada:",
+          "conceptTag": "interaccion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "leftColumn": [
+            "< 0.1s",
+            "1s",
+            "3s",
+            "> 10s"
+          ],
+          "rightColumn": [
+            "Mostrar mensaje 'Procesando...'",
+            "Se siente instantáneo, no hacer nada",
+            "Mostrar barra de progreso",
+            "Cambio sutil de color (hover)"
+          ],
+          "correctPairs": {
+            "0": 1,
+            "1": 3,
+            "2": 0,
+            "3": 2
+          },
+          "feedbackCorrect": "¡Excelente! Feedback apropiado para cada timing.",
+          "feedbackWrong": "<0.1s=instantáneo, 1s=cambio color, 3s=mensaje, >10s=barra progreso."
+        }
+      ]
+    },
+    {
+      "id": "lesson-2-6",
+      "worldId": "world-1",
+      "order": 14,
+      "title": "Test Final Capítulo 2",
+      "description": "Aplicá principios avanzados",
+      "narrativeIntro": "El tabernero quiere lanzar una app para reservas. Debés aplicar todo lo avanzado que aprendiste: espaciado, color, affordances, feedback. ¡Demostrá tu expertise!",
+      "xpReward": 100,
+      "unlockRequirement": "lesson-2-5",
+      "isChapterTest": true,
+      "achievementReward": "chapter-2-complete",
+      "exercises": [
+        {
+          "id": "ex-2-6-1",
+          "type": "multiple_choice",
+          "prompt": "Para una app de reservas de taberna, ¿qué paleta de colores es más apropiada?",
+          "conceptTag": "evaluacion",
+          "difficulty": 2,
+          "xpReward": 15,
+          "options": [
+            "Azul frío y gris (formal)",
+            "Marrón cálido y naranja (acogedor)",
+            "Rojo brillante y amarillo (urgente)",
+            "Violeta y rosa (elegante)"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡Exacto! Cálidos comunican comida y acogida.",
+          "feedbackWrong": "Para comida/taberna, colores cálidos (marrón/naranja) son más apropiados."
+        },
+        {
+          "id": "ex-2-6-2",
+          "type": "choose_design",
+          "prompt": "¿Qué botón de reserva tiene mejores affordances y estados?",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "designs": [
+            {
+              "id": "design-poor-affordance",
+              "label": "Opción A",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Reservar mesa",
+                "backgroundColor": "#EEEEEE",
+                "textColor": "#DDDDDD",
+                "fontSize": { "title": 18 }
+              }
+            },
+            {
+              "id": "design-good-affordance",
+              "label": "Opción B",
+              "mockup": {
+                "type": "simple_poster",
+                "title": "Reservar Mesa →",
+                "subtitle": "(Toca para continuar)",
+                "backgroundColor": "#58CC02",
+                "textColor": "#FFFFFF",
+                "fontSize": { "title": 20, "subtitle": 12 }
+              }
+            }
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "¡PERFECTO! La B tiene color contrastado, flecha (signifier), y texto explicativo.",
+          "feedbackWrong": "La A tiene bajo contraste y no parece clickeable. La B usa color, signifiers claros."
+        },
+        {
+          "id": "ex-2-6-3",
+          "type": "match_pairs",
+          "prompt": "Aplicá los principios correctos a cada problema:",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "leftColumn": [
+            "Elementos muy apretados",
+            "Usuario no sabe si botón funciona",
+            "App se ve fría para restaurante",
+            "No se distinguen grupos de info"
+          ],
+          "rightColumn": [
+            "Aumentar espaciado entre grupos",
+            "Cambiar a paleta cálida",
+            "Agregar estados (hover, active)",
+            "Usar padding múltiplo de 8px"
+          ],
+          "correctPairs": {
+            "0": 3,
+            "1": 2,
+            "2": 1,
+            "3": 0
+          },
+          "feedbackCorrect": "¡EXCELENTE! Aplicaste todos los principios correctamente.",
+          "feedbackWrong": "Apretado=padding 8px; Feedback=estados; Frío=cálido; Grupos=espaciado."
+        },
+        {
+          "id": "ex-2-6-4",
+          "type": "reorder",
+          "prompt": "Ordená el proceso completo de diseño de la app (de principio a fin):",
+          "conceptTag": "evaluacion",
+          "difficulty": 3,
+          "xpReward": 20,
+          "items": [
+            "1. Entender necesidad (reservas fáciles)",
+            "2. Definir paleta de colores apropiada",
+            "3. Diseñar affordances claras (botones, inputs)",
+            "4. Implementar sistema de espaciado (8px)",
+            "5. Agregar feedback y estados",
+            "6. Testear con usuarios reales"
+          ],
+          "correctOrder": [0, 1, 3, 2, 4, 5],
+          "feedbackCorrect": "¡PERFECTO! Proceso completo de UX: problema → estilo → estructura → interacción → test.",
+          "feedbackWrong": "Orden: necesidad → color → espaciado → affordances → feedback → test."
+        },
+        {
+          "id": "ex-2-6-5",
+          "type": "multiple_choice",
+          "prompt": "¿Qué aprendiste en el Capítulo 2?",
+          "conceptTag": "evaluacion",
+          "difficulty": 1,
+          "xpReward": 10,
+          "options": [
+            "Que el diseño bonito es suficiente",
+            "Principios avanzados: espaciado, peso visual, color, affordances, feedback",
+            "Que solo importa el código",
+            "Que no importa el usuario"
+          ],
+          "correctAnswer": 1,
+          "feedbackCorrect": "🎉 ¡FELICITACIONES! Completaste el Capítulo 2. Dominás los principios avanzados de UX/UI.",
+          "feedbackWrong": "El Capítulo 2 te enseñó principios avanzados para crear experiencias completas y profesionales."
         }
       ]
     }

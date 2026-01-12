@@ -36,7 +36,7 @@ export default function LessonScreen() {
     (state) => state.markExerciseComplete
   );
 
-  const { hearts, addXP, loseHeart, addCoins, incrementLessonsCompleted } =
+  const { hearts, addXP, loseHeart, addCoins, incrementLessonsCompleted, unlockAchievement } =
     useGameStore();
 
   const lesson = world.lessons.find((l) => l.id === id);
@@ -64,6 +64,7 @@ export default function LessonScreen() {
 
   const currentExercise = lesson.exercises[currentIndex];
   const progress = ((currentIndex + 1) / lesson.exercises.length) * 100;
+  const isTheoryScreen = currentExercise?.type === 'theory';
 
   const handleStartLesson = () => {
     setShowIntro(false);
@@ -71,6 +72,28 @@ export default function LessonScreen() {
 
   const handleAnswer = (answer: any) => {
     setUserAnswer(answer);
+
+    // Si es teoría, avanzar automáticamente después de leer
+    if (isTheoryScreen) {
+      // Dar tiempo para que se registre la respuesta, luego continuar
+      setTimeout(() => {
+        handleTheoryContinue();
+      }, 300);
+    }
+  };
+
+  const handleTheoryContinue = () => {
+    // Marcar teoría como completada
+    markExerciseComplete(currentExercise.id, true);
+    addXP(currentExercise.xpReward);
+
+    // Pasar al siguiente ejercicio
+    if (currentIndex < lesson.exercises.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setUserAnswer(null);
+    } else {
+      handleLessonComplete();
+    }
   };
 
   const handleVerify = () => {
@@ -140,10 +163,17 @@ export default function LessonScreen() {
     addCoins(Config.COINS_PER_LESSON);
     incrementLessonsCompleted();
 
+    // Desbloquear achievement si es test de capítulo
+    if (lesson.achievementReward) {
+      unlockAchievement(lesson.achievementReward);
+    }
+
     analytics.track('lesson_complete', {
       lessonId: lesson.id,
       xpGained: lesson.xpReward,
       heartsRemaining: hearts,
+      isChapterTest: lesson.isChapterTest || false,
+      achievementUnlocked: lesson.achievementReward || null,
     });
 
     // Volver al menú automáticamente al completar la lección
@@ -208,15 +238,17 @@ export default function LessonScreen() {
         </Card>
       </ScrollView>
 
-      {/* Verify Button */}
-      <View style={styles.footer}>
-        <Button
-          title="Verificar"
-          onPress={handleVerify}
-          variant="primary"
-          disabled={userAnswer === null || showFeedback}
-        />
-      </View>
+      {/* Verify Button - No mostrar para pantallas de teoría */}
+      {!isTheoryScreen && (
+        <View style={styles.footer}>
+          <Button
+            title="Verificar"
+            onPress={handleVerify}
+            variant="primary"
+            disabled={userAnswer === null || showFeedback}
+          />
+        </View>
+      )}
 
       {/* Feedback Modal */}
       <FeedbackModal
