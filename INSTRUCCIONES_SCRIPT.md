@@ -26,24 +26,30 @@ El script está configurado con estas rutas (ya las puse en el código):
 
 Si necesitas cambiarlas, edita las líneas 11-12 del archivo `batch_image_grayscale.py`
 
-### 3. Instalar dependencias
+### 3. Ejecutar (FORMA FÁCIL)
 
-Abre una terminal (CMD o PowerShell) en la carpeta del proyecto y ejecuta:
+**¡MÉTODO RECOMENDADO!** Solo haz doble clic en:
 
-```bash
-pip install -r requirements.txt
+```
+instalar_y_ejecutar.bat
 ```
 
-O directamente:
+Este archivo automáticamente:
+- ✅ Verifica que Python esté instalado
+- ✅ Instala pip y Pillow
+- ✅ Verifica que esté el archivo gradient_map.png
+- ✅ Ejecuta el script
 
+### 4. Ejecutar (Forma manual)
+
+Si prefieres hacerlo manualmente, abre CMD o PowerShell en la carpeta del proyecto:
+
+**Instalar dependencias:**
 ```bash
-pip install Pillow
+python -m pip install Pillow
 ```
 
-### 4. Ejecutar el script
-
-En la misma terminal, ejecuta:
-
+**Ejecutar el script:**
 ```bash
 python batch_image_grayscale.py
 ```
